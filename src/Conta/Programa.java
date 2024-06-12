@@ -2,16 +2,23 @@ package Conta;
 
 import java.util.Locale;
 import java.util.Scanner;
-
 import Entidades.Cores;
 import Entidades.Opcoes;
+import Entidades.Conta;
 
 public class Programa extends Opcoes {
 	public static void main(String[] args) {
 
 		Locale.setDefault(Locale.US);
 		Scanner sc = new Scanner(System.in);
-
+		
+		Conta c1 = new Conta(1, 123, 1, "Joao", 10000.0f);
+		c1.visualizar();
+		c1.sacar(120000.0f);
+		c1.visualizar();
+		c1.depositar(5000.0f);
+		c1.visualizar();
+		
 		int opcao;
 
 		while (true) {
