@@ -5,6 +5,8 @@ import java.util.Scanner;
 import Entidades.Cores;
 import Entidades.Opcoes;
 import Entidades.Conta;
+import Entidades.ContaCorrente;
+import Entidades.ContaPoupanca;
 
 public class Programa extends Opcoes {
 	public static void main(String[] args) {
@@ -12,12 +14,29 @@ public class Programa extends Opcoes {
 		Locale.setDefault(Locale.US);
 		Scanner sc = new Scanner(System.in);
 		
+		//Testando Classe Conta
 		Conta c1 = new Conta(1, 123, 1, "Joao", 10000.0f);
 		c1.visualizar();
 		c1.sacar(120000.0f);
 		c1.visualizar();
 		c1.depositar(5000.0f);
 		c1.visualizar();
+		
+		//Testando Classe Conta Corrente
+		ContaCorrente cc1 = new ContaCorrente(2, 123, 1, "Rita", 15000.0f, 1000.0f);
+		cc1.visualizar();
+		cc1.sacar(12000.0f);
+		cc1.visualizar();
+		cc1.depositar(5000.0f);
+		cc1.visualizar();
+		
+		//Testando Classe Conta Poupança
+		ContaPoupanca cp1 = new ContaPoupanca(3, 123, 2, "Cida", 100000.0f, 15);
+		cp1.visualizar();
+		cp1.sacar(1000.0f);
+		cp1.visualizar();
+		cp1.depositar(5000.0f);
+		cp1.visualizar();
 		
 		int opcao;
 

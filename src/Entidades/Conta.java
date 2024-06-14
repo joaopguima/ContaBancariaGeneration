@@ -63,8 +63,7 @@ public class Conta {
 			System.out.println("\nSaldo insuficiente!");
 			return false;
 		} 
-		this.setSaldo(this.getSaldo() - saldo);
-		System.out.println("passou aqui");
+		this.setSaldo(this.getSaldo() - valor);
 		return true;
 		
 	}
